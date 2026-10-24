@@ -1,0 +1,95 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --silver: #dde3e8;
+  --burgundy: #3a0f34;
+  --amber: #eaaa00;
+
+  /* Slightly stronger dividers for better visibility */
+  --line: rgba(58, 15, 52, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--silver);
+  color: var(--burgundy);
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hl {
+  border-top: 1px solid var(--line);
+}
+
+.link {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+  transition: background-size 0.3s;
+}
+
+.link:hover {
+  background-size: 100% 1px;
+}
+
+.btn {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.9rem 1.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid currentColor;
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: var(--amber);
+  color: var(--burgundy);
+  border-color: var(--amber);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Subtle editorial grid */
+.grid-lines {
+  background-image: linear-gradient(
+    to right,
+    var(--line) 1px,
+    transparent 1px
+  );
+  background-size: 25% 100%;
+}
+
+/* Keep the hero clean without vertical grid lines */
+#top.grid-lines {
+  background-image: none;
+}
+
+section[id],
+main {
+  scroll-margin-top: 4.5rem;
+}

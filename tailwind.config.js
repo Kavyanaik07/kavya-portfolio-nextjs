@@ -1,0 +1,1 @@
+module.exports={content:["./app/**/*.tsx","./components/**/*.tsx"],theme:{extend:{colors:{silver:"#DDE3E8",burgundy:"#3A0F34",amber:"#EAAA00"},fontFamily:{display:["var(--font-display)","Georgia","serif"],sans:["var(--font-sans)","system-ui","sans-serif"]}}}};
